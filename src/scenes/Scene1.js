@@ -21,6 +21,7 @@ export default function Scene1({ scene, handleScene }) {
         rotation="0 45 0"
         color="red"
         onClick={() => handleScene(2)}
+        // onClick={() => setCount(count + 1)}
       ></a-box>
       <a-text
         value="Velkommen til simulationen"
