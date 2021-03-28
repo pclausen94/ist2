@@ -1,4 +1,4 @@
-export default function Camera() {
+export default function Camera({ formatTime, timer }) {
   return (
     <a-camera wasd-controls="acceleration: 20">
       <a-entity
@@ -9,7 +9,21 @@ export default function Camera() {
         animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
         animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
       ></a-entity>
-      <a-text position="-1.50 -0.50 -1" value="Player 1" color="#fff"></a-text>
+
+      {/* Hardcoded point/bogstav system:
+      De enkelte linjer skal hver svarer til en valgmulighed med værdierne: A, B, C og D.
+      Disse bogstaver skal indsættes ved klik på en svarfirkant under scenerne */}
+      <a-text
+        position="-0.90 -0.50 -1"
+        value="Svar: _ _ _ _ _ _ _"
+        color="#fff"
+      ></a-text>
+      <a-text
+        position="-0.50 -0.75 -1"
+        value={`Tid: ${formatTime(timer)}`}
+        color="#fff"
+        opacity="0.5"
+      ></a-text>
     </a-camera>
   );
 }

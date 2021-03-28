@@ -1,4 +1,9 @@
-export default function Scene1({ scene, handleScene }) {
+export default function Scene1({ scene, handleScene, handleStart }) {
+  const handleSceneChange = () => {
+    handleStart();
+    handleScene(2);
+  };
+
   return (
     <a-entity
       environment={`active: ${scene === 1}; preset: none; shadow: true`}
@@ -10,6 +15,7 @@ export default function Scene1({ scene, handleScene }) {
         width="5"
         height="0.7"
       ></a-plane>
+
       <a-text
         value="Slip cirklen over firkanten, for at begynde."
         position="0.60 2.5 5"
@@ -17,10 +23,11 @@ export default function Scene1({ scene, handleScene }) {
         color="white"
       ></a-text>
       <a-box
+        src="#skyTexture"
         position="-1.5 1.5 5"
         rotation="0 45 0"
         color="red"
-        onClick={() => handleScene(2)}
+        onClick={handleSceneChange}
         // onClick={() => setCount(count + 1)}
       ></a-box>
       <a-text
