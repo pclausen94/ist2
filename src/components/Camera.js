@@ -1,4 +1,17 @@
+import { useGlobal, useEffect, useState } from "reactn";
+
 export default function Camera({ formatTime, timer }) {
+  const [answers, setAnswers] = useGlobal("answers");
+  const [answerField, setAnswerField] = useState();
+
+  // useEffect(() => {
+  //   let string = "";
+  //   answers.map((answer) => {
+  //     string = string + " " + answer.character;
+  //   });
+  //   setAnswerField(string);
+  // }, [answers]);
+
   return (
     <a-camera wasd-controls="acceleration: 20">
       <a-entity
@@ -15,7 +28,7 @@ export default function Camera({ formatTime, timer }) {
       Disse bogstaver skal indsættes ved klik på en svarfirkant under scenerne */}
       <a-text
         position="-0.90 -0.50 -1"
-        value="Svar: _ _ _ _ _ _ _"
+        value={`Svar: ${answerField}`}
         color="#fff"
       ></a-text>
       <a-text

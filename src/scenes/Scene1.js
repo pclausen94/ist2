@@ -1,13 +1,21 @@
-export default function Scene1({ scene, handleScene, handleStart }) {
+import { useGlobal, useEffect } from "reactn";
+
+export default function Scene1({ timerActions }) {
+  const [preset, setPreset] = useGlobal("preset");
+  const [step, setStep] = useGlobal("step");
+  const [g, setG] = useGlobal();
+
   const handleSceneChange = () => {
-    handleStart();
-    handleScene(2);
+    timerActions.handleStart();
+    setStep(1);
   };
 
+  useEffect(() => {
+    setG({ ...g, preset: "none" });
+  }, []);
+
   return (
-    <a-entity
-      environment={`active: ${scene === 1}; preset: none; shadow: true`}
-    >
+    <>
       <a-plane
         position="-1.5 2.5 5"
         rotation="0 180 0"
@@ -28,7 +36,6 @@ export default function Scene1({ scene, handleScene, handleStart }) {
         rotation="0 45 0"
         color="red"
         onClick={handleSceneChange}
-        // onClick={() => setCount(count + 1)}
       ></a-box>
       <a-text
         value="Velkommen til simulationen"
@@ -78,6 +85,6 @@ export default function Scene1({ scene, handleScene, handleStart }) {
         width="4.680"
         height="0.9"
       ></a-plane>
-    </a-entity>
+    </>
   );
 }
