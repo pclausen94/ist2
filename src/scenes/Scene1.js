@@ -23,7 +23,6 @@ export default function Scene1({ timerActions }) {
         width="5"
         height="0.7"
       ></a-plane>
-
       <a-text
         value="Slip cirklen over firkanten, for at begynde."
         position="0.60 2.5 5"
