@@ -4,7 +4,6 @@ export default function Scene2() {
   const [step, setStep] = useGlobal("step");
   const [g, setG] = useGlobal();
 
-  //Understående bliver ikke "sat". Dette er en note om at det skal fixes i fremtiden.
   useEffect(() => {
     setG({
       ...g,
@@ -21,14 +20,6 @@ export default function Scene2() {
 
   return (
     <>
-      {/* Adgang til tutorial (start komponent nummer 1). Kan aktiveres ved at
-      fjerne kommentar. */}
-      {/* <a-box
-        position="-8.5 0.5 -3"
-        rotation="0 45 0"
-        color="green"
-        onClick={() => setStep(0)}
-      ></a-box> */}
       <a-box
         src="#number1"
         position="8.5 1.0 9"

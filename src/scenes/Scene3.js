@@ -1,15 +1,15 @@
-import { useState } from "react";
 import { useGlobal, useEffect } from "reactn";
 
 export default function Scene3() {
   const [step, setStep] = useGlobal("step");
   const [g, setG] = useGlobal();
-  const [answer, setAnswer] = useGlobal("answer");
+  const [answer, setAnswer] = useGlobal("answer1");
 
   useEffect(() => {
     setG({
       ...g,
       preset: "egypt",
+      skyColor: "yellow",
     });
   }, []);
 

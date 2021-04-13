@@ -12,5 +12,14 @@ export default function Scene12() {
     });
   }, []);
 
-  return <a-box src="#number1" position="8.5 1.0 9" rotation="0 45 0"></a-box>;
+  return (
+    <>
+      <a-box
+        src="#back"
+        position="12.5 1.0 9"
+        rotation="0 45 0"
+        onClick={() => setStep(1)}
+      ></a-box>
+    </>
+  );
 }
