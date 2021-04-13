@@ -6,7 +6,3 @@ export const formatTime = (timer) => {
 
   return `${getHours}:${getMinutes}:${getSeconds}`;
 };
-
-export const formatAnswer = (answer) => {
-  return `_ _ _ _ _`;
-};

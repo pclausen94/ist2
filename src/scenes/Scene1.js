@@ -11,26 +11,25 @@ export default function Scene1({ timerActions }) {
   };
 
   useEffect(() => {
-    setG({ ...g, preset: "none" });
+    setG({ ...g, preset: "none", groundColor: "grey" });
   }, []);
 
   return (
     <>
       <a-plane
-        position="-1.5 2.5 5"
+        position="-1.9 2.5 5"
         rotation="0 180 0"
         color="black"
-        width="5"
+        width="5.4"
         height="0.7"
       ></a-plane>
       <a-text
-        value="Slip cirklen over firkanten, for at begynde."
+        value="Slip cirklen over firkanten, for at begynde testen og starte tiden."
         position="0.60 2.5 5"
         rotation="0 180 0"
         color="white"
       ></a-text>
       <a-box
-        src="#skyTexture"
         position="-1.5 1.5 5"
         rotation="0 45 0"
         color="red"
