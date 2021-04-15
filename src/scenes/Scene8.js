@@ -9,7 +9,8 @@ export default function Scene8() {
     setG({
       ...g,
       preset: "tron",
-      shadow: true,
+      groundColor: "black",
+      skyColor: "grey",
     });
   }, []);
 

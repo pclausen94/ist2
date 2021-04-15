@@ -1,5 +1,7 @@
 // Shared
 import back from "../images/back.png";
+import stop from "../images/stop.jpg";
+import start from "../images/start.jpg";
 
 // Question hub
 import number1 from "../images/number1.png";
@@ -72,6 +74,8 @@ export default function Assets() {
     <a-assets>
       {/* Shared */}
       <img id="back" src={back} alt="back" />
+      <img id="stop" src={stop} alt="stop" />
+      <img id="start" src={start} alt="start" />
 
       {/* Question hub */}
       <img id="number1" src={number1} alt="number1" />

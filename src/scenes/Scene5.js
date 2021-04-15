@@ -9,7 +9,10 @@ export default function Scene5() {
     setG({
       ...g,
       preset: "threetowers",
-      shadow: true,
+      groundColor: "silver",
+      dressing: "towers",
+      dressingColor: "grey",
+      dressingAmount: "50",
     });
   }, []);
 

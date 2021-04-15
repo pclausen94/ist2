@@ -9,7 +9,10 @@ export default function Scene9() {
     setG({
       ...g,
       preset: "japan",
-      shadow: true,
+      dressing: "torii",
+      dressingColor: "default",
+      dressingAmount: "20",
+      groundColor: "#11617B",
     });
   }, []);
 

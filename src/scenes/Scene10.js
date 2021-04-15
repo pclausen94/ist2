@@ -9,7 +9,7 @@ export default function Scene10() {
     setG({
       ...g,
       preset: "dream",
-      shadow: true,
+      skyColor: "purple",
     });
   }, []);
 

@@ -9,7 +9,8 @@ export default function Scene6() {
     setG({
       ...g,
       preset: "poison",
-      shadow: true,
+      dressing: "trees",
+      dressingColor: "green",
     });
   }, []);
 

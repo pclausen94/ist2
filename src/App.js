@@ -18,6 +18,7 @@ import Scene9 from "./scenes/Scene9";
 import Scene10 from "./scenes/Scene10";
 import Scene11 from "./scenes/Scene11";
 import Scene12 from "./scenes/Scene12";
+import Scene13 from "./scenes/Scene13";
 
 function getScene(step, timerActions) {
   switch (step) {
@@ -55,7 +56,10 @@ function getScene(step, timerActions) {
       return <Scene11 />;
 
     case 11:
-      return <Scene12 />;
+      return <Scene12 timerActions={timerActions} />;
+
+    case 12:
+      return <Scene13 />;
 
     default:
       return <Scene1 timerActions={timerActions} />;

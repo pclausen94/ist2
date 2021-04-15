@@ -11,7 +11,7 @@ export default function Scene1({ timerActions }) {
   };
 
   useEffect(() => {
-    setG({ ...g, preset: "none", groundColor: "grey" });
+    setG({ ...g, preset: "none", groundColor: "white" });
   }, []);
 
   return (
@@ -30,9 +30,10 @@ export default function Scene1({ timerActions }) {
         color="white"
       ></a-text>
       <a-box
+        src="#start"
+        color="green"
         position="-1.5 1.5 5"
         rotation="0 45 0"
-        color="red"
         onClick={handleSceneChange}
       ></a-box>
       <a-text

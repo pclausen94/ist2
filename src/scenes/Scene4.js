@@ -9,6 +9,11 @@ export default function Scene4() {
     setG({
       ...g,
       preset: "goldmine",
+      skyColor: "black",
+      dressing: "cylinders",
+      dressingColor: "gold",
+      groundColor: "black",
+      dressingAmount: 100,
     });
   }, []);
 
@@ -16,20 +21,20 @@ export default function Scene4() {
     <>
       <a-box
         src="#back"
-        position="12.5 1.0 9"
+        position="16.5 1.0 9"
         rotation="0 45 0"
         onClick={() => setStep(1)}
       ></a-box>
       <a-plane
         src="#q2"
-        position="6.5 4.0 9"
+        position="10.5 4.0 9"
         rotation="0 180 0"
         width="4"
         height="4"
       ></a-plane>
       <a-plane
         src="#q2"
-        position="6.5 4.0 9"
+        position="10.5 4.0 9"
         rotation="0 0 0"
         width="4"
         height="4"
@@ -37,36 +42,36 @@ export default function Scene4() {
 
       <a-box
         src="#q2a"
-        position="8.5 1.0 9"
+        position="12.5 1.0 9"
         rotation="0 45 0"
         onClick={() => setAnswer("A")}
       ></a-box>
       <a-box
         src="#q2b"
-        position="6.5 1.0 9"
+        position="10.5 1.0 9"
         rotation="0 45 0"
         onClick={() => setAnswer("B")}
       ></a-box>
       <a-box
         src="#q2c"
-        position="4.5 1.0 9"
+        position="8.5 1.0 9"
         rotation="0 45 0"
         onClick={() => setAnswer("C")}
       ></a-box>
       <a-text
-        position="1.0 4.0 9"
+        position="5.0 4.0 9"
         rotation="0 180 0"
         value={`Svar: ${answer}`}
       ></a-text>
       <a-plane
-        position="0.5 4.0 9"
+        position="4.5 4.0 9"
         color="green"
         width="2"
         height="0.7"
       ></a-plane>
-      <a-text position="0.0 4.0 9" value={`Svar: ${answer}`}></a-text>
+      <a-text position="4.0 4.0 9" value={`Svar: ${answer}`}></a-text>
       <a-plane
-        position="0.5 4.0 9"
+        position="4.5 4.0 9"
         rotation="0 180 0"
         color="green"
         width="2"

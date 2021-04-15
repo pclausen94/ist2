@@ -9,7 +9,10 @@ export default function Scene11() {
     setG({
       ...g,
       preset: "volcano",
-      shadow: true,
+      dressing: "mushrooms",
+      dressingColor: "brown",
+      dressingAmount: "20",
+      skyColor: "brown",
     });
   }, []);
 

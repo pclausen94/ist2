@@ -11,10 +11,9 @@ export default function Scene2() {
       skyType: "gradient",
       skyColor: "blue",
       horizonColor: "silver",
-      groundColor: "burlywood",
-      dressing: "apparatus",
+      groundColor: "#0B4B0B",
+      dressing: "none",
       dressingAmount: 100,
-      dressingColor: "silver",
     });
   }, []);
 
@@ -80,6 +79,30 @@ export default function Scene2() {
         rotation="0 45 0"
         onClick={() => setStep(11)}
       ></a-box>
+      <a-plane
+        position="0 4.0 9"
+        rotation="0 180 0"
+        width="12"
+        height="3"
+      ></a-plane>
+      <a-plane
+        position="0 4.0 9"
+        rotation="0 0 0"
+        width="12"
+        height="3"
+      ></a-plane>
+      <a-text
+        position="6.0 4.0 9"
+        rotation="0 180 0"
+        value="Husk at skriv dine svar ned undervejs, du kan tage tilbage og svare ligesaa meget du vil. Naar du har besvaret dem alle, saa klik exit."
+        width="12"
+      ></a-text>
+      <a-text
+        position="-6.0 4.0 9"
+        rotation="0 0 0"
+        value="Husk at skriv dine svar ned undervejs, du kan tage tilbage og svare ligesaa meget du vil. Naar du har besvaret dem alle, saa klik exit."
+        width="12"
+      ></a-text>
     </>
   );
 }

@@ -9,7 +9,10 @@ export default function Scene7() {
     setG({
       ...g,
       preset: "arches",
-      shadow: true,
+      groundColor: "purple",
+      dressing: "apparatus",
+      dressingColor: "yellow",
+      dressingAmount: "10",
     });
   }, []);
 

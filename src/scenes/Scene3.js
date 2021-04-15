@@ -10,6 +10,10 @@ export default function Scene3() {
       ...g,
       preset: "egypt",
       skyColor: "yellow",
+      dressing: "pyramids",
+      dressingAmount: "16",
+      dressingColor: "sand",
+      groundColor: "sand",
     });
   }, []);
 
